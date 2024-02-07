@@ -6,7 +6,7 @@
 /*   By: gasouza <gasouza@student.42sp.org.br >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 06:54:43 by gasouza           #+#    #+#             */
-/*   Updated: 2024/02/07 06:09:21 by gasouza          ###   ########.fr       */
+/*   Updated: 2024/02/07 06:18:03 by gasouza          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ void ClapTrap::attack( const std::string& target )
     if (this->isDied()) {
         std::cout 
             << "ClapTrap " << _name 
-            << " cannot receive damage because is died!" << std::endl; 
+            << " cannot attack because is died!" << std::endl; 
         return ;
     }
     
