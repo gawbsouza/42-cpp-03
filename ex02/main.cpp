@@ -6,7 +6,7 @@
 /*   By: gasouza <gasouza@student.42sp.org.br >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 20:41:05 by gasouza           #+#    #+#             */
-/*   Updated: 2024/02/05 21:42:22 by gasouza          ###   ########.fr       */
+/*   Updated: 2024/02/07 06:36:34 by gasouza          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,38 +15,42 @@
 
 int main( void )
 {
-    FragTrap a("Gabriel");
-    FragTrap b;
-    ClapTrap c;
+    FragTrap a("Frag");
+    ClapTrap b("Clap");
 
-    b.printStatus();
     a.printStatus();
-    c.printStatus();
+    b.printStatus();
 
-    a.attack("Someone");
-    a.attack("Someone");
     a.attack("Someone");
     b.attack("Another one");
-    c.attack("Ghost");
+    a.takeDamage(9);
+    b.takeDamage(9);
 
     a.printStatus();
     b.printStatus();
-    c.printStatus();
 
-    c = b;
-    b = FragTrap("Ghost");
+    a.beRepaired(10);
+    b.beRepaired(10);
 
-    a.takeDamage(7);
-    b.takeDamage(42);
-    a.beRepaired(5);
-    c.attack("Other");
-    c.takeDamage(50);
+    a.printStatus();
+    b.printStatus();
+
+    a.takeDamage(20);
+    b.takeDamage(20);
+    a.attack("Someone");
+    b.attack("Another one");
+    a.beRepaired(10);
+    b.beRepaired(10);
+    
+    a.highFivesGuys();
     
     a.printStatus();
     b.printStatus();
-    c.printStatus();
 
-    a.highFivesGuys();
+    b = a;
+
+    a.printStatus();
+    b.printStatus();
     
     return 0;
 }

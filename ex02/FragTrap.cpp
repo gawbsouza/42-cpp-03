@@ -6,7 +6,7 @@
 /*   By: gasouza <gasouza@student.42sp.org.br >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 20:02:57 by gasouza           #+#    #+#             */
-/*   Updated: 2024/02/05 21:40:00 by gasouza          ###   ########.fr       */
+/*   Updated: 2024/02/07 06:35:16 by gasouza          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void FragTrap::attack( const std::string& target )
     if (this->isDied()) {
         std::cout 
             << "FragTrap " << ClapTrap::getName() 
-            << " cannot receive damage because is died!" << std::endl; 
+            << " cannot attack because is died!" << std::endl; 
         return ;
     }
     

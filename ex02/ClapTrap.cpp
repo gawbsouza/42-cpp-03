@@ -6,7 +6,7 @@
 /*   By: gasouza <gasouza@student.42sp.org.br >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 06:54:43 by gasouza           #+#    #+#             */
-/*   Updated: 2024/02/05 21:05:36 by gasouza          ###   ########.fr       */
+/*   Updated: 2024/02/07 06:18:03 by gasouza          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,10 @@
 
 // Constructors
 
-ClapTrap::ClapTrap( void )
+ClapTrap::ClapTrap( void ): _hitPoints(10), _energyPoints(10), _attackDamage(0)
 {
     std::cout << "ClapTrap default constructor called" << std::endl;
     this->_name = "Unamed";
-    this->_hitPoints = INITIAL_HIT_POINTS;
-    this->_energyPoints = INITIAL_ENERGY_POINTS;
-    this->_attackDamage = INITIAL_ATTACK_DAMAGE;
 }
 
 ClapTrap::ClapTrap( const ClapTrap & ref )
@@ -30,13 +27,10 @@ ClapTrap::ClapTrap( const ClapTrap & ref )
     *this = ref;
 }
 
-ClapTrap::ClapTrap( const std::string & name )
+ClapTrap::ClapTrap( const std::string & name ): _hitPoints(10), _energyPoints(10), _attackDamage(0)
 {
     std::cout << "ClapTrap name constructor called" << std::endl;
     this->_name = name;
-    this->_hitPoints = INITIAL_HIT_POINTS;
-    this->_energyPoints = INITIAL_ENERGY_POINTS;
-    this->_attackDamage = INITIAL_ATTACK_DAMAGE;
 }
 
 ClapTrap::ClapTrap(
@@ -90,7 +84,7 @@ void ClapTrap::attack( const std::string& target )
     if (this->isDied()) {
         std::cout 
             << "ClapTrap " << _name 
-            << " cannot receive damage because is died!" << std::endl; 
+            << " cannot attack because is died!" << std::endl; 
         return ;
     }
     
@@ -137,7 +131,7 @@ void ClapTrap::beRepaired( unsigned int amount )
     }
 
     if (!this->consumeEnergy(1)) {
-        std::cout << "ClapTrap " << _name << "Insuficient energy points to repair" << std::endl;
+        std::cout << "ClapTrap " << _name << " insuficient energy points to repair" << std::endl;
         return; 
     }
     
