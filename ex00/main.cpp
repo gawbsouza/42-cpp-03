@@ -6,7 +6,7 @@
 /*   By: gasouza <gasouza@student.42sp.org.br >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 20:41:05 by gasouza           #+#    #+#             */
-/*   Updated: 2024/02/05 20:52:54 by gasouza          ###   ########.fr       */
+/*   Updated: 2024/02/07 05:56:09 by gasouza          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,24 @@ int main( void )
 
     c2.takeDamage(3);
     c2.takeDamage(2);
+    c2.attack("Someone");
+    c2.attack("Someone");
+    c2.attack("Someone");
+    c2.attack("Someone");
+    c2.attack("Someone");
+    c2.attack("Someone");
 
     c2.printStatus();
 
     c2.takeDamage(4);
     c2.beRepaired(10);
-    c2.takeDamage(50);
-    
-    c2.printStatus();
+    c2.attack("Someone");
 
-    c2.beRepaired(5);
+    c2.printStatus();
+    
+    c2.takeDamage(50);
+    c2.beRepaired(10);
+    c2.attack("Someone");
     
     c2.printStatus();
     

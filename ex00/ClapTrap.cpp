@@ -6,7 +6,7 @@
 /*   By: gasouza <gasouza@student.42sp.org.br >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 06:54:43 by gasouza           #+#    #+#             */
-/*   Updated: 2024/02/05 21:01:25 by gasouza          ###   ########.fr       */
+/*   Updated: 2024/02/07 05:51:14 by gasouza          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,7 +113,7 @@ void ClapTrap::beRepaired( unsigned int amount )
     }
 
     if (!this->consumeEnergy(1)) {
-        std::cout << "ClapTrap " << _name << "Insuficient energy points to repair" << std::endl;
+        std::cout << "ClapTrap " << _name << " insuficient energy points to repair" << std::endl;
         return; 
     }
     
