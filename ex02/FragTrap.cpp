@@ -6,12 +6,14 @@
 /*   By: gasouza <gasouza@student.42sp.org.br >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 20:02:57 by gasouza           #+#    #+#             */
-/*   Updated: 2024/02/07 06:35:16 by gasouza          ###   ########.fr       */
+/*   Updated: 2024/02/07 07:01:41 by gasouza          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 #include <iostream>
+#include <cstdio>
+#include <limits>
 
 FragTrap::FragTrap( void ): ClapTrap("Unamed", 100, 100, 30)
 {
@@ -60,6 +62,19 @@ void FragTrap::attack( const std::string& target )
 void FragTrap::highFivesGuys( void )
 {
     std::cout << "Give me a high five 🙏: " << std::endl;
-    std::string dummy;
-    std::cin >> dummy;
+    std::string highFive;
+    
+    for (;;) {
+    
+        getline(std::cin, highFive);
+
+        if (highFive.compare("high five") != 0) {
+            std::clearerr(stdin);
+            std::cin.clear();
+            std::cout << "Try again!" << std::endl;
+            continue;
+        }
+
+        break;
+    }
 }
