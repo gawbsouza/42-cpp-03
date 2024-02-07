@@ -6,7 +6,7 @@
 /*   By: gasouza <gasouza@student.42sp.org.br >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 06:54:43 by gasouza           #+#    #+#             */
-/*   Updated: 2024/02/07 05:51:14 by gasouza          ###   ########.fr       */
+/*   Updated: 2024/02/07 06:00:14 by gasouza          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,10 @@
 
 // Constructors
 
-ClapTrap::ClapTrap( void )
+ClapTrap::ClapTrap( void ): _hitPoints(10), _energyPoints(10), _attackDamage(0)
 {
     std::cout << "Default constructor called" << std::endl;
     this->_name = "Unamed";
-    this->_hitPoints = INITIAL_HIT_POINTS;
-    this->_energyPoints = INITIAL_ENERGY_POINTS;
-    this->_attackDamage = INITIAL_ATTACK_DAMAGE;
 }
 
 ClapTrap::ClapTrap( const ClapTrap & ref )
@@ -30,13 +27,10 @@ ClapTrap::ClapTrap( const ClapTrap & ref )
     *this = ref;
 }
 
-ClapTrap::ClapTrap( const std::string & name )
+ClapTrap::ClapTrap( const std::string & name ): _hitPoints(10), _energyPoints(10), _attackDamage(0)
 {
     std::cout << "Name constructor called" << std::endl;
     this->_name = name;
-    this->_hitPoints = INITIAL_HIT_POINTS;
-    this->_energyPoints = INITIAL_ENERGY_POINTS;
-    this->_attackDamage = INITIAL_ATTACK_DAMAGE;
 }
 
 ClapTrap::~ClapTrap( void )
